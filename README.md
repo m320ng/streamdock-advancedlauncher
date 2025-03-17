@@ -1,8 +1,13 @@
 # Advanced Launcher
 Forked for use with StreamDock (Mirabox, etc..)
 
-## Todo List
-- Add IsFixedIcon feature
+## v1.8a Release
+
+<https://github.com/m320ng/streamdock-advancedlauncher/releases/tag/v1.8a>
+
+## List
+- Application Fix
+- IsFixedIcon feature
 
 ---
 ---
