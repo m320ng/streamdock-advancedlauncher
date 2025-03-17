@@ -1,4 +1,14 @@
 # Advanced Launcher
+Forked for use with StreamDock (Mirabox, etc..)
+
+## Todo List
+- Add IsFixedIcon feature
+
+---
+---
+---
+
+# Advanced Launcher
  Smart application launcher for the Elgato Stream Deck
 
 **Author's website and contact information:** [https://barraider.com](https://barraider.com)
