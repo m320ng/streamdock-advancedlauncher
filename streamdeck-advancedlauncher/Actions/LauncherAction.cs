@@ -46,7 +46,8 @@ namespace AdvancedLauncher.Actions
                     RunAsAdmin = false,
                     ShowRunningIndicator = false,
                     BringToFront = false,
-                    BackgroundRun = false
+                    BackgroundRun = false,
+                    FixTinyIcons = false
                 };
                 return instance;
             }
@@ -84,7 +85,10 @@ namespace AdvancedLauncher.Actions
 
             [JsonProperty(PropertyName = "backgroundRun")]
             public bool BackgroundRun { get; set; }
-            
+
+            [JsonProperty(PropertyName = "fixTinyIcons")]
+            public bool FixTinyIcons { get; set; }
+
         }
 
         #region Private Members
@@ -138,8 +142,9 @@ namespace AdvancedLauncher.Actions
         public async override void ReceivedSettings(ReceivedSettingsPayload payload)
         {
             string appOld = settings.Application;
+            bool fixTinyIconsOld = settings.FixTinyIcons;
             Tools.AutoPopulateSettings(settings, payload.Settings);
-            if (appOld != settings.Application) // Application has changed
+            if (appOld != settings.Application || fixTinyIconsOld != settings.FixTinyIcons) // Application has changed
             {
                 InitializeStartInDirectory();
             }
@@ -332,7 +337,12 @@ namespace AdvancedLauncher.Actions
 
         private void FetchFileImage()
         {
-            if (fileImage != null)
+            if (settings.FixTinyIcons)
+            {
+                return;
+            }
+
+                if (fileImage != null)
             {
                 fileImage.Dispose();
                 fileImage = null;

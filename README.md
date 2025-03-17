@@ -1,8 +1,10 @@
 # Advanced Launcher
 Forked for use with StreamDock (Mirabox, etc..)
 
+v1.8 + IsFixedIcon
+
 ## Todo List
-- Add IsFixedIcon feature
+- <strike>Add IsFixedIcon feature</strike>
 
 ---
 ---
